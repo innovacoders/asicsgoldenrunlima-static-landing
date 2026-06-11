@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-[14px] font-medium leading-[1.7] text-[#666] antialiased;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-[90%] max-w-[1280px];
+  }
+
+  .nav-link {
+    @apply text-[13px] font-bold uppercase tracking-normal text-white transition-colors duration-200 hover:text-asics-gold lg:text-[16px];
+  }
+
+  .cta-button {
+    @apply inline-flex items-center justify-center bg-black px-[60px] py-3 text-[16px] font-bold uppercase text-white shadow-asics transition-colors duration-300 hover:bg-asics-red;
+  }
+
+  .results-button {
+    @apply inline-flex items-center justify-center bg-asics-blue px-6 py-1 text-[16px] font-semibold text-white shadow-asics transition-colors duration-300 hover:bg-black;
+  }
+
+  .section-label {
+    @apply text-right text-[32px] font-extrabold leading-none text-asics-gold sm:text-[42px] md:text-[58px] lg:text-[72px];
+  }
+
+  .info-card {
+    @apply flex items-center gap-4 px-8 py-5 text-white shadow-asics;
+  }
+
+  .race-info-panel {
+    @apply relative mx-auto w-full max-w-[441px] overflow-visible;
+  }
+
+  .race-info-image {
+    @apply block h-auto w-full;
+  }
+
+  .race-info-cards {
+    @apply absolute left-[-22px] right-[28px] top-[35%] flex flex-col gap-5 sm:left-[-28px] sm:right-[34px] sm:gap-7 md:left-[-30px] md:right-[36px] md:gap-8;
+  }
+
+  .race-info-panel .info-card {
+    @apply min-h-[84px] px-5 py-3.5 sm:min-h-[92px] sm:px-8 sm:py-4 md:min-h-[96px] md:gap-7 md:px-10 md:py-4;
+  }
+
+  .info-card-icon {
+    @apply flex h-14 w-14 shrink-0 items-center justify-center text-[42px] leading-none text-white;
+  }
+
+  .info-card-title {
+    @apply text-[22px] font-bold uppercase leading-tight text-white;
+  }
+
+  .map-card {
+    @apply relative mx-auto max-w-[470px] overflow-hidden transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .map-card img {
+    @apply w-full transition-opacity duration-300;
+  }
+
+  .map-card .hover-map {
+    @apply absolute inset-0 opacity-0;
+  }
+
+  .map-card:hover .hover-map {
+    @apply opacity-100;
+  }
+
+  .map-card:hover .base-map {
+    @apply opacity-0;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 700ms ease, transform 700ms ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal[data-animate="right"] {
+    transform: translateX(-42px);
+  }
+
+  .reveal[data-animate="right"].is-visible {
+    transform: translateX(0);
+  }
+
+  .reveal[data-animate="bounce"] {
+    transform: translateY(32px) scale(0.96);
+  }
+
+  .reveal[data-animate="bounce"].is-visible {
+    transform: translateY(0) scale(1);
+  }
+}

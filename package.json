@@ -1,0 +1,15 @@
+{
+  "name": "asics-golden-run-lima-static",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/styles.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17",
+    "vite": "6.0.7"
+  }
+}
