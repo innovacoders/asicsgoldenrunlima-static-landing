@@ -39,6 +39,49 @@
     @apply text-right text-[32px] font-extrabold leading-none text-asics-gold sm:text-[42px] md:text-[58px] lg:text-[72px];
   }
 
+  .section-banner {
+    @apply relative flex min-h-[98px] items-center overflow-hidden md:min-h-[136px];
+  }
+
+  .section-banner::before {
+    @apply absolute inset-0 opacity-45 content-[''];
+    background-image: url("../assets/images/21k_10k.png");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: auto 118%;
+  }
+
+  .section-banner-blue {
+    @apply bg-asics-sky;
+  }
+
+  .section-banner-green {
+    @apply bg-asics-green;
+  }
+
+  .section-banner-red {
+    @apply bg-asics-red;
+  }
+
+  .section-banner-title {
+    @apply relative z-10 inline-flex min-h-[50px] items-center bg-black py-2 pl-6 pr-10 text-[24px] font-extrabold uppercase leading-none text-white sm:min-h-[58px] sm:pl-10 sm:pr-14 sm:text-[32px] md:min-h-[66px] md:pl-14 md:pr-16 md:text-[42px];
+  }
+
+  .section-banner-title::before {
+    @apply absolute right-full top-0 h-full w-[10vw] bg-black content-[''];
+  }
+
+  .section-banner-title::after {
+    @apply absolute left-full top-0 h-full w-12 origin-top-left skew-x-[-38deg] bg-black content-[''] sm:w-16 md:w-20;
+  }
+
+  .routes-showcase {
+    @apply bg-cover bg-center py-14 md:py-24;
+    background-image:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.52) 38%, #016089 82%),
+      url("../assets/images/background-routes-2026.webp");
+  }
+
   .info-card {
     @apply flex items-center gap-4 px-8 py-5 text-white shadow-asics;
   }
